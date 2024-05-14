@@ -1,0 +1,156 @@
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Facturalo.dll.config
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Facturalo.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Facturalo.pdb
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csc.exe
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csc.exe.config
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csc.rsp
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csi.exe
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csi.exe.config
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\csi.rsp
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.Managed.Core.targets
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\Microsoft.Win32.Primitives.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.AppContext.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Collections.Immutable.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Console.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.StackTrace.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Globalization.Calendars.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.IO.Compression.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.IO.Compression.ZipFile.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.IO.FileSystem.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.IO.FileSystem.Primitives.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Net.Http.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Net.Sockets.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Reflection.Metadata.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Encoding.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Primitives.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Text.Encoding.CodePages.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Threading.Tasks.Extensions.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.ValueTuple.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Xml.ReaderWriter.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Xml.XmlDocument.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Xml.XPath.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\System.Xml.XPath.XDocument.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\vbc.exe
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\vbc.exe.config
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\vbc.rsp
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\VBCSCompiler.exe
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\roslyn\VBCSCompiler.exe.config
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\BouncyCastle.Crypto.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\itextsharp.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Newtonsoft.Json.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\RazorEngine.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Net.Http.Formatting.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Http.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Http.WebHost.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Razor.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\itextsharp.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\RazorEngine.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Razor.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Newtonsoft.Json.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Net.Http.Formatting.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Http.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\System.Web.Http.WebHost.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\es\System.Net.Http.Formatting.resources.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\es\System.Web.Http.resources.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\es\System.Web.Http.WebHost.resources.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.AssemblyReference.cache
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.CoreCompileInputs.cache
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.CopyComplete
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\obj\Debug\Facturalo.dll
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\obj\Debug\Facturalo.pdb
+A:\Documentos 2Do Disco\IMOVS\Facturación\Facturalo\Facturalo\bin\devServicioNET.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.AssemblyReference.cache
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.CoreCompileInputs.cache
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Facturalo.dll.config
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Facturalo.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Facturalo.pdb
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csc.exe
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csc.exe.config
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csc.rsp
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csi.exe
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csi.exe.config
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\csi.rsp
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.Managed.Core.targets
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\Microsoft.Win32.Primitives.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.AppContext.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Collections.Immutable.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Console.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Diagnostics.StackTrace.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Globalization.Calendars.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.IO.Compression.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.IO.Compression.ZipFile.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.IO.FileSystem.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.IO.FileSystem.Primitives.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Net.Http.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Net.Sockets.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Reflection.Metadata.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Encoding.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.Primitives.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Text.Encoding.CodePages.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Threading.Tasks.Extensions.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.ValueTuple.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Xml.ReaderWriter.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Xml.XmlDocument.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Xml.XPath.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\System.Xml.XPath.XDocument.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\vbc.exe
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\vbc.exe.config
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\vbc.rsp
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\VBCSCompiler.exe
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\roslyn\VBCSCompiler.exe.config
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\BouncyCastle.Crypto.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\devServicioNET.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\itextsharp.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Newtonsoft.Json.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\RazorEngine.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Net.Http.Formatting.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Http.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Http.WebHost.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Razor.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\itextsharp.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\RazorEngine.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Razor.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Newtonsoft.Json.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Net.Http.Formatting.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Http.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\System.Web.Http.WebHost.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\es\System.Net.Http.Formatting.resources.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\es\System.Web.Http.resources.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\bin\es\System.Web.Http.WebHost.resources.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\obj\Debug\Facturalo.csproj.CopyComplete
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\obj\Debug\Facturalo.dll
+A:\Documentos 2Do Disco\Codigos y lenguajes\Repos\CFDI-4.0\Facturalo\Facturalo\obj\Debug\Facturalo.pdb

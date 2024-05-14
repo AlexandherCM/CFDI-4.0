@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Factura</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tabla {
+            width: 100%;
+        }
+
+        .container {
+            margin: auto;
+            width: 98%;
+            margin-top: 1.2%;
+        }
+
+        .data-money table tr td {
+            border-bottom: none;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body class="container" style="font-family:Arial;">
+    <div>
+        <table class="Gral-Data tabla">
+            <tr>
+                <td style="width:55%;">
+                    <table class="tabla">
+                        <tr style="text-align: left;">
+                            <!--<th colspan="2">
+                                <h1 style="color: #3654de; font-size:350%;">CAAM</h1>
+                            </th>-->
+                            <img style="width:35%" src="@Model.PathLogo" />
+                        </tr>
+                        <tr style="letter-spacing: 2px;">
+                            <td style="width:30%">
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    <strong>Emisor:</strong>
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    <strong>RFC emisor:</strong>
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    <strong>Régimen emisor:</strong>
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    <strong>Fecha:</strong>
+                                </p>
+                            </td>
+                            <td style="width:70%">
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Emisor.Nombre
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Emisor.Rfc
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Emisor.RegimenFiscal
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Fecha
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+                <td style="width: 45%; position: relative; ">
+                    <!-- - - - - - - - - - - - - - - - - - - - - - -->
+                    <table class="tabla">
+                        <tr>
+                            <th style="padding-bottom: 1%; border-bottom: 2px solid #000;" colspan="2">
+                                <p><strong>Factura</strong></p>
+                                <p><strong>UUID:</strong> @Model.TimbreFiscalDigital.UUID</p>
+                            </th>
+                        </tr>
+                        <tr style="letter-spacing: 2px;">
+                            <td>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    CFDI Versión:
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Nombre receptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    RFC receptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Régimen receptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Domicilio receptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Uso CFDI
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Folio
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    Método pago
+                                </p>
+                            </td>
+                            <td>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Version
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Receptor.Nombre
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Receptor.Rfc
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Receptor.RegimenFiscalReceptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Receptor.DomicilioFiscalReceptor
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Receptor.UsoCFDI
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.Folio
+                                </p>
+                                <p style="word-break: break-all; font-family:Arial; font-size:70%">
+                                    @Model.MetodoPago
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- - - - - - - - - - - - - - - - - - - - - - -->
+                </td>
+            </tr>
+        </table>
+
+        <!-- Desglose monetario - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table class="data-money" style="width: 100%; margin-top: 2%; border-collapse: collapse; font-size: 102%">
+            <tr style="background-color: black; color: white;">
+                <th>Cantidad</th>
+                <th>Clave</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Total</th>
+            </tr>
+            @foreach(var oConcepto in Model.Conceptos){
+            <tr style="border-bottom: 2px solid #000;">
+                <td style="padding: 1%; text-align: center;">@oConcepto.Cantidad</td>
+                <td style="padding: 1%; text-align: center;">@oConcepto.ClaveProdServ</td>
+                <td style="padding: 1%; text-align: center;">@oConcepto.Descripcion</td>
+                <td style="padding: 1%; text-align: center;">$@(oConcepto.Importe)</td>
+                <td style="padding: 1%; text-align: center;">$@(oConcepto.Cantidad*oConcepto.Importe)</td>
+            </tr>
+
+            if(oConcepto.Impuestos !=null){
+            <tr>
+                <td style="padding-top:2%;">
+                    Impuestos Trasladados
+                </td>
+                <td style="padding-top:2%" colspan="4">
+
+                    @foreach(var oTraslado in oConcepto.Impuestos.Traslados){
+                    @Raw("Importe: $")
+                    @oTraslado.Importe
+                    }
+
+                </td>
+            </tr> }}
+            <tr>
+                <td colspan="3"></td>
+                <td>Subtotal:</td>
+                <td style="text-align:right;">$ @Model.SubTotal</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Descuento:</td>
+                <td style="text-align:right;">$ @Model.Descuento</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>IVA:</td>
+                <td style="text-align:right;">$ @Model.Impuestos.Traslados.FirstOrDefault().Importe</td>
+            </tr>
+            <tr>
+                <td style="text-align:right; font-size:120%; font-weight:bold; padding-right:2%;" colspan="3">
+                    @Model.MonedaConLetra
+                </td>
+                <td>Total:</td>
+                <td style="text-align:right;">$ @Model.Total</td>
+            </tr>
+        </table>
+
+        <!-- LEYENDAS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <table style="margin-top: 4%; width: 95%; font-size:110%;">
+            <tr>
+                <td style="width: 30%; text-align: center;">
+                    <strong>Tipo de comprobante:</strong>
+                    <br />
+                    @Model.TipoDeComprobante
+                </td>
+                <td style="width: 20%; text-align: center;">
+                    <strong>Moneda:</strong>
+                    <br />
+                    @Model.Moneda
+                </td>
+                <td style="width: 28%; text-align: center;">
+                    <strong>Certificado emisor:</strong>
+                    <br />
+                    @Model.NoCertificado
+                </td>
+                <td style="width: 22%; text-align: center;">
+                    <strong>Exportación:</strong>
+                    <br />
+                    @Model.Exportacion
+                </td>
+            </tr>
+        </table>
+
+        <!-- SELLOS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <table style="margin-top:4%;">
+            <tr>
+                <td style="width:25%;">
+                    <img style="width:98%; padding-top:0.2%;" src="@Model.QR">
+                </td>
+                <td colspan="10">
+                    <div>
+                        <p><strong>Sello digital del emisor</strong></p>
+                        <p style="word-break: break-all; font-family:Arial; font-size:62%">
+                            @Model.Sello
+                        </p>
+                    </div>
+                    <div>
+                        <p><strong>Sello digital del SAT:</strong></p>
+                        <p style="word-break: break-all; font-family:Arial; font-size:62%">
+                            @Model.TimbreFiscalDigital.SelloSAT
+                        </p>
+                    </div>
+                    <div>
+                        <p><strong>Cadena original:</strong></p>
+                        <p style="word-break: break-all; font-family:Arial; font-size:62%">
+                            @Model.CadenaOriginal
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="margin-top:4%;">
+            <p>
+                Este documento es una representación impresa de un CFDI
+            </p>
+        </div>
+    </div>
+</body>
+</html>

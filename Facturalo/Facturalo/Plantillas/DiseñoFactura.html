@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td style="width:10%;">
+                    <img style="width:90%;" src="QRCode-Generated-website-300x300.png">
+                </td>
+                <td colspan="10">
+                    <div>
+                        <p><strong>Sello digital del emisor</strong></p>
+                        <p style="word-break: break-all;">
+                            V5EuzD5d1kQoxWUTOWSC2q0yD/8xnvjrT/ThHASLQwTbB4BnQZLd+5E97ZdkD2v5bp33W3jDWgUwhr+SjmJW0nTHH/HYZyppYgKtd1HLjyqQz8eLmHHVAzLSEyvhuNj3k7cJzaRvC40VBq/WbErsKJwvC9TiliNLrnXdPAjn96HclIXsSv4lmCLUAL15TMspk7kdshlX10aGKDcalat4GDoKJXXQDIrNvWe/+UCL2BnK36tXud5UzKJD+zHsPA6NpRxxGNP+Nwd9Y2s2M4Y+i6VPahNSyvvI1VlLlxn5OEXiSAqXS0Wn0Kol7efYHJG91gJ/11Cf37UOdaIF+wq/7A==
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <style>
+    </style>
+</body>
+</html>
+
+
+
+
+<div>
+    <div style="width:50%;float:left;">
+
+    </div>
+    <div style="width:50%;float:left;">
+        <label>@Model.Emisor.Nombre</label><br />
+        <label>REFACCIONARIA EL GUAPETON</label><br />
+        <label>@Model.Emisor.Rfc</label><br />
+        <label>Folio fiscal: @Model.TimbreFiscalDigital.UUID</label>
+    </div>
+    <div style="clear:both;"></div>
+
+</div>
+
+<br />
+<div>
+    Cliente: @Model.Receptor.Rfc -
+    @if(Model.Receptor.Nombre != null ){
+    @Model.Receptor.Nombre
+    }
+
+</div>
+
+
+<br />
+<div>
+    <div>
+        <table style="width:100%;" class="tabla">
+            <tr>
+                <th>Cantidad</th>
+                <th>Clave</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Total</th>
+            </tr>
+            @foreach(var oConcepto in Model.Conceptos){
+            <tr>
+                <td>@oConcepto.Cantidad</td>
+                <td>@oConcepto.ClaveProdServ</td>
+                <td>@oConcepto.Descripcion</td>
+                <td>@oConcepto.Importe</td>
+                <td>@(oConcepto.Cantidad*oConcepto.Importe)</td>
+            </tr>
+
+            if(oConcepto.Impuestos !=null){
+            <tr>
+                <td>
+                    Impuestos Trasladados
+                </td>
+                <td colspan="4">
+
+                    @foreach(var oTraslado in oConcepto.Impuestos.Traslados){
+                    @Raw("Importe: $")
+                    @oTraslado.Importe
+                    }
+
+                </td>
+            </tr>
+            }
+
+            }
+            <tr>
+                <td colspan="3"></td>
+                <td>Subtotal:</td>
+                <td>$ @Model.SubTotal</td>
+
+
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Descuento:</td>
+                <td>$ @Model.Descuento</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td>Total:</td>
+                <td>$ @Model.Total</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<br />
+<div class="textoContiguo" style="font-size:11px;">
+    @Model.MonedaConLetra
+</div>
+
+<br />
+<div class="textoContiguo" style="font-size:11px;">
+    @Model.Sello
+</div>
+
+<br />

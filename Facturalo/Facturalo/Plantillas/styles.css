@@ -1,0 +1,121 @@
+﻿
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    /*Se quitan las configuraciones por defecto como las viñetas*/
+    list-style: none;
+}
+
+th {
+    background: black;
+    text-align: center;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+th, td {
+    border: none; /* Elimina los bordes de las celdas */
+}
+
+/* - - - - - - - - - - - - - */
+
+.PrincipalTittle {
+    font-size: 90%;
+}
+
+.SecondLetters {
+    font-size: 90%;
+}
+
+.container {
+    margin: auto;
+    width: 95%;
+    margin-top: 4%;
+}
+
+/* - - - - - - - - - - - - - */
+.listDataGrl {
+    position: relative;
+    width: 100%;
+}
+
+    .listDataGrl ul:last-child {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+/* - - - - - - - - - - - - - */
+
+.data-factura tr {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 0.5rem;
+}
+
+    .data-factura tr:not(:first-child) td:first-child {
+        /* Tus estilos aquí */
+        text-align: right;
+        font-weight: bold;
+    }
+
+/* - - - - - - - - - - - - - */
+.data-Receptor tbody tr td ul {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+}
+
+.desglose-producto table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
+}
+
+.desglose-producto-dinero table tr th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Total-letter li:first-child {
+    background: black;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.desglose-dinero .leyendas {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.desglose-dinero .leyendas-2 li:first-child {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.desglose-dinero .leyendas-2 li:last-child {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.desglose-dinero {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr 1fr;
+    gap: 2rem;
+}
+
+    .desglose-dinero section:last-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
