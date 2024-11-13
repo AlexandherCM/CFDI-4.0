@@ -25,15 +25,15 @@ namespace Facturalo.Views
         private string PathCadenaOriginal = "~/Docs/CadenaOriginal/cadenaoriginal_4_0.xslt";
 
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        //private string CSD_Cer =
-        //    "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.cer";
-        //private string CSD_Key =
-        //    "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.key";
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         private string CSD_Cer =
-            "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.cer";
+            "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.cer";
         private string CSD_Key =
-            "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.key";
+            "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.key";
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        //private string CSD_Cer =
+        //    "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.cer";
+        //private string CSD_Key =
+        //    "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.key";
         // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         //private string CSD_Cer2 = "~/Docs/EKU9003173C9/CSD_Sucursal_1_EKU9003173C9.cer";
@@ -81,28 +81,28 @@ namespace Facturalo.Views
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             ComprobanteEmisor oEmisor = new ComprobanteEmisor
             {
-                //Rfc = "CACX7605101P8", // RFC obtenido del certificado
-                //Nombre = "XOCHILT CASAS CHAVEZ", // Nombre obtenido del certificado
-                //RegimenFiscal = "621" // Este valor debe ser verificado y asignado según el régimen fiscal del emisor
+                Rfc = "CACX7605101P8", // RFC obtenido del certificado
+                Nombre = "XOCHILT CASAS CHAVEZ", // Nombre obtenido del certificado
+                RegimenFiscal = "621" // Este valor debe ser verificado y asignado según el régimen fiscal del emisor
 
-                Rfc = "FUNK671228PH6", 
-                Nombre = "KARLA FUENTE NOLASCO",
-                RegimenFiscal = "621" 
+                //Rfc = "FUNK671228PH6", 
+                //Nombre = "KARLA FUENTE NOLASCO",
+                //RegimenFiscal = "621" 
             };
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             ComprobanteReceptor oReceptor = new ComprobanteReceptor
             {
-                //Rfc = "URE180429TM6",
-                //Nombre = "UNIVERSIDAD ROBOTICA ESPAÑOLA",
-                //DomicilioFiscalReceptor = "86991",
-                //RegimenFiscalReceptor = "601",
-                //UsoCFDI = "G01"
-
-                Rfc = "CACX7605101P8",
-                Nombre = "XOCHILT CASAS CHAVEZ",
-                DomicilioFiscalReceptor = "01000",
-                RegimenFiscalReceptor = "612",
+                Rfc = "URE180429TM6",
+                Nombre = "UNIVERSIDAD ROBOTICA ESPAÑOLA",
+                DomicilioFiscalReceptor = "86991",
+                RegimenFiscalReceptor = "601",
                 UsoCFDI = "G01"
+
+                //Rfc = "CACX7605101P8",
+                //Nombre = "XOCHILT CASAS CHAVEZ",
+                //DomicilioFiscalReceptor = "01000",
+                //RegimenFiscalReceptor = "612",
+                //UsoCFDI = "G01"
             };
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             List<ComprobanteConcepto> listConceptos = new List<ComprobanteConcepto>();
@@ -195,33 +195,33 @@ namespace Facturalo.Views
 
             //PROVEEDOR DE TIMBRADO ATEB - - - - - - -
 
-            var bytes = Encoding.UTF8.GetBytes(contenidoXML);
-            var XMLbase64 = Convert.ToBase64String(bytes);
+            //var bytes = Encoding.UTF8.GetBytes(contenidoXML);
+            //var XMLbase64 = Convert.ToBase64String(bytes);
 
 
-            TimbradoAtebService ateb = new TimbradoAtebService(false);
-            var resultado = await ateb.TimbrarCFDIAsync(XMLbase64);
+            //TimbradoAtebService ateb = new TimbradoAtebService(false);
+            //var resultado = await ateb.TimbrarCFDIAsync(XMLbase64);
 
-            var timbreFiscal = DeserializeTimbreFiscalDigital(resultado);
-            var factura = GetXmlATEB(this.PathFacturaSellada, CadenaOriginal);
-            factura = AgregarTimbreFiscalAComplemento(factura, timbreFiscal);
+            //var timbreFiscal = DeserializeTimbreFiscalDigital(resultado);
+            //var factura = GetXmlATEB(this.PathFacturaSellada, CadenaOriginal);
+            //factura = AgregarTimbreFiscalAComplemento(factura, timbreFiscal);
 
-            CreateXML(factura, Server.MapPath(PathFacturaTimbrada));
+            //CreateXML(factura, Server.MapPath(PathFacturaTimbrada));
 
             //PROVEEDOR DE TIMBRADO FACTURALO - - - - - - -
             //Realizó el timbrado con el proveedor de timbrado Facturalo
 
-            //ServicioTimbradoWS cliente = new ServicioTimbradoWS();
-            //RespuestaTimbrado res = cliente.timbrar(this.ApiKey, contenidoXML);
+            ServicioTimbradoWS cliente = new ServicioTimbradoWS();
+            RespuestaTimbrado res = cliente.timbrar(this.ApiKey, contenidoXML);
 
-            //Response.Write(res.code);
-            //Response.Write("<br>" + res.message);
+            Response.Write(res.code);
+            Response.Write("<br>" + res.message);
 
-            //if (res.code == "200")
-            //{
-            //    System.IO.File.WriteAllText(Server.MapPath(this.PathFacturaTimbrada), res.data);
-            //    GetXml(this.PathFacturaTimbrada, CadenaOriginal);
-            //}
+            if (res.code == "200")
+            {
+                System.IO.File.WriteAllText(Server.MapPath(this.PathFacturaTimbrada), res.data);
+                GetXml(this.PathFacturaTimbrada, CadenaOriginal);
+            }
         }
 
         public static TimbreFiscalDigital DeserializeTimbreFiscalDigital(string soapResponseXml)

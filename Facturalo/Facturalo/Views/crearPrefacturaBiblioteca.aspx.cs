@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using CFDI4._0.CFDI;
 using CFDI4._0.ToolsXML;
 using Newtonsoft.Json;
@@ -8,6 +10,8 @@ namespace Facturalo.Views
 {
     public partial class crearPrefacturaBiblioteca : System.Web.UI.Page
     {
+        private CFDI4._0.CFDI.Comprobante oComprobante;
+        OpCFDI opXML;
 
         private string ClavePrivada = "12345678a";
 
@@ -16,9 +20,9 @@ namespace Facturalo.Views
         private string CSD_Key =
             "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.key";
 
-        protected async void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            OpXML opXML = new OpXML(Server.MapPath(CSD_Cer), Server.MapPath(CSD_Key), ClavePrivada);
+            opXML = new OpCFDI(Server.MapPath(CSD_Cer), Server.MapPath(CSD_Key), ClavePrivada);
 
 
             decimal tasaIva = 0.16m;
@@ -28,32 +32,22 @@ namespace Facturalo.Views
             decimal total = importe + importeIva;
 
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-            CFDI4._0.CFDI.Comprobante oComprobante = new CFDI4._0.CFDI.Comprobante();
+            oComprobante = new CFDI4._0.CFDI.Comprobante();
             oComprobante.Version = "4.0";
             oComprobante.Serie = "H";
             oComprobante.Folio = "1";
             oComprobante.Fecha = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
-            //oComprobante.Sello = ""; // Pendiente
             oComprobante.FormaPago = "01";
-            //oComprobante.NoCertificado = "30001000000500003416"; // Asegúrate de tener este valor asignado correctamente
-            //oComprobante.Certificado = ""; // Pendiente
             oComprobante.SubTotal = importe; // Subtotal antes de IVA
-            // Agrega el IVA al total
             oComprobante.Total = total;
-            //oComprobante.Descuento = 1; // Si se aplica algún descuento, debe ser considerado en los cálculos
             oComprobante.Moneda = "MXN";
             oComprobante.Exportacion = "01";
-            // El total se calculará después de agregar el IVA al subtotal
             oComprobante.TipoDeComprobante = "I";
             oComprobante.MetodoPago = "PUE";
             oComprobante.LugarExpedicion = "07020";
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             CFDI4._0.CFDI.ComprobanteEmisor oEmisor = new CFDI4._0.CFDI.ComprobanteEmisor
             {
-                //Rfc = "CACX7605101P8", // RFC obtenido del certificado
-                //Nombre = "XOCHILT CASAS CHAVEZ", // Nombre obtenido del certificado
-                //RegimenFiscal = "621" // Este valor debe ser verificado y asignado según el régimen fiscal del emisor
-
                 Rfc = "FUNK671228PH6",
                 Nombre = "KARLA FUENTE NOLASCO",
                 RegimenFiscal = "621"
@@ -61,12 +55,6 @@ namespace Facturalo.Views
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             CFDI4._0.CFDI.ComprobanteReceptor oReceptor = new CFDI4._0.CFDI.ComprobanteReceptor
             {
-                //Rfc = "URE180429TM6",
-                //Nombre = "UNIVERSIDAD ROBOTICA ESPAÑOLA",
-                //DomicilioFiscalReceptor = "86991",
-                //RegimenFiscalReceptor = "601",
-                //UsoCFDI = "G01"
-
                 Rfc = "CACX7605101P8",
                 Nombre = "XOCHILT CASAS CHAVEZ",
                 DomicilioFiscalReceptor = "01000",
@@ -123,18 +111,20 @@ namespace Facturalo.Views
                 }
             };
 
+            
+        }
+
+        protected async void Button1_Click(object sender, EventArgs e)
+        {
             string xml = opXML.CrearXmlSellado(oComprobante);
-            string base64Request = opXML.ConvertXmlToBase64(xml);   
+            string base64Request = opXML.ConvertXmlToBase64(xml);
 
             HttpService httpService = new HttpService();
 
             var jsonContent = JsonConvert.SerializeObject(base64Request);
-            var resultado = await httpService.PostAsync("https://localhost:7159/api/Timbrado/ObtenerTimbreFiscal", jsonContent, false);
+            string resultado = 
+                await httpService.PostAsync("https://localhost:7159/api/Timbrado/ObtenerXmlCompleto", jsonContent);
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
