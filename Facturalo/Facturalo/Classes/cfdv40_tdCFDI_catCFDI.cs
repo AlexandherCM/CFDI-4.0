@@ -91,6 +91,7 @@ public partial class Comprobante
 
     private string confirmacionField;
 
+    [XmlIgnore]
     public TimbreFiscalDigital TimbreFiscalDigital;
 
     [XmlIgnore]

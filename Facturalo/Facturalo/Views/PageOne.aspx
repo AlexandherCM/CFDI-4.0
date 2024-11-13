@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PageOne.aspx.cs" Inherits="Facturalo.Views.PageOne" %>
+﻿<%@ Page Async="true"  Language="C#" AutoEventWireup="true" CodeBehind="PageOne.aspx.cs" Inherits="Facturalo.Views.PageOne" %>
 
 <!DOCTYPE html>
 

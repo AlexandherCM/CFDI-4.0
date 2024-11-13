@@ -46,6 +46,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="CFDI4.0">
+      <HintPath>..\..\..\BibliotecaCFDI4.0\CFDI4.0\CFDI4.0\bin\Debug\netstandard2.0\CFDI4.0.dll</HintPath>
+    </Reference>
     <Reference Include="devServicioNET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\AlexCM\Downloads\devServicioNET.dll</HintPath>
@@ -109,6 +112,7 @@
     <Content Include="Plantillas\Factura.html" />
     <Content Include="Plantillas\QRCode-Generated-website-300x300.png" />
     <Content Include="Plantillas\styles.css" />
+    <Content Include="Views\crearPrefacturaBiblioteca.aspx" />
     <Content Include="Views\PageOne.aspx" />
     <Content Include="Web.config" />
     <Content Include="wkhtmltopdf\wkhtmltoimage.exe" />
@@ -127,9 +131,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimbradoAtebService.cs" />
     <Compile Include="Utils\opensslkey.cs" />
     <Compile Include="Utils\SelloDigital.cs" />
     <Compile Include="Utils\StringWriterWithEncoding.cs" />
+    <Compile Include="Views\crearPrefacturaBiblioteca.aspx.cs">
+      <DependentUpon>crearPrefacturaBiblioteca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\crearPrefacturaBiblioteca.aspx.designer.cs">
+      <DependentUpon>crearPrefacturaBiblioteca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\PageOne.aspx.cs">
       <DependentUpon>PageOne.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,10 +163,14 @@
     <Content Include="Docs\Pem\CSD_Sucursal_1_CACX7605101P8_20230509_130254_llavePrivada.pem" />
     <Content Include="Docs\Pem\CSD_Sucursal_1_EKU9003173C9_cer_pem.pem" />
     <Content Include="Docs\Pem\CSD_Sucursal_1_EKU9003173C9_key_pem.pem" />
-    <Content Include="Docs\EKU9003173C9\CSD_Sucursal_1_EKU9003173C9.cer" />
-    <Content Include="Docs\EKU9003173C9\CSD_Sucursal_1_EKU9003173C9.key" />
     <Content Include="Fonts\Arial.ttf" />
     <Content Include="Fonts\ariblk.ttf" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\Claveprivada_FIEL_FUNK671228PH6_20230509_114807.key" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\CSD_FUNK671228PH6_20230509130458\CSD_FUNK671228PH6_20230509_130458.sdg" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\CSD_FUNK671228PH6_20230509130458\CSD_Sucursal_1_FUNK671228PH6_20230509_130451.cer" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\CSD_FUNK671228PH6_20230509130458\CSD_Sucursal_1_FUNK671228PH6_20230509_130451.key" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\funk671228ph6.cer" />
+    <Content Include="Docs\FUNK671228PH6_20230509114807\Renovacion_FIEL_FUNK671228PH6_20230509_114807.ren" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

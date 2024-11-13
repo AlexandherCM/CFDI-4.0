@@ -10,6 +10,9 @@ using System.Diagnostics;
 using Facturalo.Classes.FacturaPDF;
 using System.Linq;
 using devServicioNET;
+using System.Web.UI.WebControls;
+using Org.BouncyCastle.Utilities.Encoders;
+using System.Threading.Tasks;
 
 namespace Facturalo.Views
 {
@@ -20,10 +23,18 @@ namespace Facturalo.Views
 
         private string ClavePrivada = "12345678a";
         private string PathCadenaOriginal = "~/Docs/CadenaOriginal/cadenaoriginal_4_0.xslt";
+
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        //private string CSD_Cer =
+        //    "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.cer";
+        //private string CSD_Key =
+        //    "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.key";
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         private string CSD_Cer =
-            "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.cer";
+            "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.cer";
         private string CSD_Key =
-            "~/Docs/CACX7605101P8_20230509114423/CSD_CACX7605101P8_20230509130305/CSD_Sucursal_1_CACX7605101P8_20230509_130254.key";
+            "~/Docs/FUNK671228PH6_20230509114807/CSD_FUNK671228PH6_20230509130458/CSD_Sucursal_1_FUNK671228PH6_20230509_130451.key";
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         //private string CSD_Cer2 = "~/Docs/EKU9003173C9/CSD_Sucursal_1_EKU9003173C9.cer";
         //private string CSD_Key2 = "~/Docs/EKU9003173C9/CSD_Sucursal_1_EKU9003173C9.key";
@@ -32,10 +43,10 @@ namespace Facturalo.Views
         private string PathFacturaSellada = "~/Docs/FacturasXML/FacturaSellada.xml";
         private string PathFacturaTimbrada = "~/Docs/FacturasXML/FacturaTimbrada.xml";
 
-        protected void Page_Load(object sender, EventArgs e) {  }
+        protected void Page_Load(object sender, EventArgs e) { }
 
         [Obsolete]
-        protected void btnGeneratePem_Click(object sender, EventArgs e)
+        protected async void btnGeneratePem_Click(object sender, EventArgs e)
         {
             string numeroCertificado, aa, b, c;
             SelloDigital.leerCER(Server.MapPath(this.CSD_Cer), out aa, out b, out c, out numeroCertificado);
@@ -66,21 +77,31 @@ namespace Facturalo.Views
             // El total se calculará después de agregar el IVA al subtotal
             oComprobante.TipoDeComprobante = "I";
             oComprobante.MetodoPago = "PUE";
-            oComprobante.LugarExpedicion = "72000";
+            oComprobante.LugarExpedicion = "07020";
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             ComprobanteEmisor oEmisor = new ComprobanteEmisor
             {
-                Rfc = "CACX7605101P8", // RFC obtenido del certificado
-                Nombre = "XOCHILT CASAS CHAVEZ", // Nombre obtenido del certificado
-                RegimenFiscal = "621" // Este valor debe ser verificado y asignado según el régimen fiscal del emisor
+                //Rfc = "CACX7605101P8", // RFC obtenido del certificado
+                //Nombre = "XOCHILT CASAS CHAVEZ", // Nombre obtenido del certificado
+                //RegimenFiscal = "621" // Este valor debe ser verificado y asignado según el régimen fiscal del emisor
+
+                Rfc = "FUNK671228PH6", 
+                Nombre = "KARLA FUENTE NOLASCO",
+                RegimenFiscal = "621" 
             };
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
             ComprobanteReceptor oReceptor = new ComprobanteReceptor
             {
-                Rfc = "URE180429TM6",
-                Nombre = "UNIVERSIDAD ROBOTICA ESPAÑOLA",
-                DomicilioFiscalReceptor = "86991",
-                RegimenFiscalReceptor = "601",
+                //Rfc = "URE180429TM6",
+                //Nombre = "UNIVERSIDAD ROBOTICA ESPAÑOLA",
+                //DomicilioFiscalReceptor = "86991",
+                //RegimenFiscalReceptor = "601",
+                //UsoCFDI = "G01"
+
+                Rfc = "CACX7605101P8",
+                Nombre = "XOCHILT CASAS CHAVEZ",
+                DomicilioFiscalReceptor = "01000",
+                RegimenFiscalReceptor = "612",
                 UsoCFDI = "G01"
             };
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -135,12 +156,12 @@ namespace Facturalo.Views
 
             //Crear XML's, sellado, timbrado y conversión del PDF
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-            SaveXML(oComprobante);
+            await SaveXML(oComprobante);
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         }
 
         [Obsolete]
-        private void SaveXML(Comprobante oComprobante)
+        private async Task SaveXML(Comprobante oComprobante)
         {
             //Se crea el XML sin sellar
             CreateXML(oComprobante, Server.MapPath(this.PathFactura));
@@ -169,17 +190,62 @@ namespace Facturalo.Views
             // Timbrar - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
             string contenidoXML = System.IO.File.ReadAllText(Server.MapPath(PathFacturaSellada)); //Obtengo el XML sellado
 
-            // Realizó el timbrado con el proveedor de timbrado Facturalo
-            ServicioTimbradoWS cliente = new ServicioTimbradoWS();
-            RespuestaTimbrado res = cliente.timbrar(this.ApiKey, contenidoXML);
 
-            Response.Write(res.code);
-            Response.Write("<br>" + res.message);
 
-            if(res.code == "200")
+
+            //PROVEEDOR DE TIMBRADO ATEB - - - - - - -
+
+            var bytes = Encoding.UTF8.GetBytes(contenidoXML);
+            var XMLbase64 = Convert.ToBase64String(bytes);
+
+
+            TimbradoAtebService ateb = new TimbradoAtebService(false);
+            var resultado = await ateb.TimbrarCFDIAsync(XMLbase64);
+
+            var timbreFiscal = DeserializeTimbreFiscalDigital(resultado);
+            var factura = GetXmlATEB(this.PathFacturaSellada, CadenaOriginal);
+            factura = AgregarTimbreFiscalAComplemento(factura, timbreFiscal);
+
+            CreateXML(factura, Server.MapPath(PathFacturaTimbrada));
+
+            //PROVEEDOR DE TIMBRADO FACTURALO - - - - - - -
+            //Realizó el timbrado con el proveedor de timbrado Facturalo
+
+            //ServicioTimbradoWS cliente = new ServicioTimbradoWS();
+            //RespuestaTimbrado res = cliente.timbrar(this.ApiKey, contenidoXML);
+
+            //Response.Write(res.code);
+            //Response.Write("<br>" + res.message);
+
+            //if (res.code == "200")
+            //{
+            //    System.IO.File.WriteAllText(Server.MapPath(this.PathFacturaTimbrada), res.data);
+            //    GetXml(this.PathFacturaTimbrada, CadenaOriginal);
+            //}
+        }
+
+        public static TimbreFiscalDigital DeserializeTimbreFiscalDigital(string soapResponseXml)
+        {
+            // Cargar el documento XML
+            XmlDocument document = new XmlDocument();
+            document.LoadXml(soapResponseXml);
+
+            // Seleccionar el nodo TimbreFiscalDigital
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(document.NameTable);
+            nsmgr.AddNamespace("tfd", "http://www.sat.gob.mx/TimbreFiscalDigital");
+
+            XmlNode timbreNode = document.SelectSingleNode("//tfd:TimbreFiscalDigital", nsmgr);
+
+            if (timbreNode == null)
             {
-                System.IO.File.WriteAllText(Server.MapPath(this.PathFacturaTimbrada), res.data);
-                GetXml(this.PathFacturaTimbrada, CadenaOriginal);
+                throw new InvalidOperationException("No se encontró el nodo TimbreFiscalDigital en la respuesta SOAP.");
+            }
+
+            // Deserializar el nodo
+            XmlSerializer serializer = new XmlSerializer(typeof(TimbreFiscalDigital));
+            using (StringReader reader = new StringReader(timbreNode.OuterXml))
+            {
+                return (TimbreFiscalDigital)serializer.Deserialize(reader);
             }
         }
 
@@ -212,13 +278,16 @@ namespace Facturalo.Views
         }
         private void CreateXML(Comprobante oComprobante, string pathXML)
         {
-            // Serialización del Xml - - - - - - - - - - - - - - - - - - - - - - - - - 
             XmlSerializerNamespaces xmlNamespaces = new XmlSerializerNamespaces();
+
             // Agregar los namespaces necesarios
             xmlNamespaces.Add("cfdi", "http://www.sat.gob.mx/cfd/4");
             xmlNamespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
 
+            // Serialización del Xml - - - - - - - - - - - - - - - - - - - - - - - - - 
             XmlSerializer OXmlSerializer = new XmlSerializer(typeof(Comprobante));
+            // Serialización del Xml - - - - - - - - - - - - - - - - - - - - - - - - - 
+
             string sXml = string.Empty;
 
             using (var sww = new StringWriterWithEncoding(Encoding.UTF8))
@@ -259,6 +328,22 @@ namespace Facturalo.Views
                 // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                 oComprobante.CadenaOriginal = CadenaOriginal;
                 CreatePDF(oComprobante);
+            }
+        }
+        
+        private Comprobante GetXmlATEB(string pathXML, string CadenaOriginal)
+        {
+            string path = Server.MapPath(pathXML);
+            string xmlContent = File.ReadAllText(path);
+
+            // Deserializar el contenido del archivo XML en un objeto
+            XmlSerializer serializer = new XmlSerializer(typeof(Comprobante), "http://www.sat.gob.mx/cfd/4");
+            using (FileStream fileStream = new FileStream(path, FileMode.Open))
+            {
+                Comprobante oComprobante = (Comprobante)serializer.Deserialize(fileStream);
+                // - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                oComprobante.CadenaOriginal = CadenaOriginal;
+                return oComprobante;
             }
         }
         private void TimbrarJSON(Comprobante oComprobante)
@@ -302,5 +387,37 @@ namespace Facturalo.Views
 
             //RespuestaTimbrado res = cliente.timbrarJSON(this.ApiKey, base64, keyPEMData, cerPEMData);
         }
+
+
+        /// DATOSSSS
+
+        private Comprobante AgregarTimbreFiscalAComplemento(Comprobante comprobante, TimbreFiscalDigital timbreFiscal)
+        {
+            // Crear un elemento XML para TimbreFiscalDigital
+            XmlDocument doc = new XmlDocument();
+            XmlElement timbreElement = doc.CreateElement("tfd", "TimbreFiscalDigital", "http://www.sat.gob.mx/TimbreFiscalDigital");
+
+            timbreElement.SetAttribute("Version", timbreFiscal.Version);
+            timbreElement.SetAttribute("UUID", timbreFiscal.UUID);
+            timbreElement.SetAttribute("FechaTimbrado", timbreFiscal.FechaTimbrado.ToString("yyyy-MM-ddTHH:mm:ss"));
+            timbreElement.SetAttribute("RfcProvCertif", timbreFiscal.RfcProvCertif);
+            timbreElement.SetAttribute("SelloCFD", timbreFiscal.SelloCFD);
+            timbreElement.SetAttribute("NoCertificadoSAT", timbreFiscal.NoCertificadoSAT);
+            timbreElement.SetAttribute("SelloSAT", timbreFiscal.SelloSAT);
+
+            // Verificar si el Complemento está inicializado
+            if (comprobante.Complemento == null)
+            {
+                comprobante.Complemento = new ComprobanteComplemento();
+            }
+
+            // Convertir el arreglo Any a una lista temporal, agregar el timbre y volver a asignarlo como arreglo
+            var elementos = comprobante.Complemento.Any?.ToList() ?? new List<XmlElement>();
+            elementos.Add(timbreElement);
+            comprobante.Complemento.Any = elementos.ToArray();
+
+            return comprobante;
+        }
+
     }
 }
